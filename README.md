@@ -1,4 +1,4 @@
-RAK Wireless RAK815 nRF52832 Breakout Breakout
+RAK Wireless RAK815 nRF52832 Breakout
 ========================================
 
 [[RAK Wireless RAK815 nRF52832 Breakout]](https://www.aliexpress.com/item/RAK815-Hybrid-Location-Tracker-LoRa-Bluetooth-5-0-Beacon-GPS-Sensors-LCD-LoRaWAN-1-0-2/32849717052.html)
@@ -34,6 +34,20 @@ Documentation
 --------------
 * **[Arduino Hardware Definitions](https://github.com/sparkfun/Arduino_Boards/)** - Arduino cores and tools for the nRF52.
 
+Download and Install the Board Package
+-------------
+The nRF52 Arduino cores are based on the great work by sandeepmistry. Sparkfun has added nRF52832 Breakout Board compatibility to his board files, and added an extra tool to enable serial bootloading.
+
+Since the RAK wireless RAK815 is just having a few extra LEDs and Buttons that the Sparkfun board, it was easy to port the bootloader functionality.
+
+* To install support for the nRF52 board in Arduino, begin by opening your Arduino preferences (File > Preferences). Then copy and paste the URL below into the “Additional Board Manager URLs” text box.
+
+https://raw.githubusercontent.com/sparkfun/Arduino_Boards/nrf5/IDE_Board_Manager/package_sparkfun_index.json
+
+* Then hit OK, and navigate to the Tools > Board > Boards Manager… tool. A search for “nRF52” should turn up a SparkFun nRF52 Boards result. Select that and click install.
+* The install may take a few minutes – the package includes arm-gcc and a few other tools totaling around 100 MB. Once the installation is complete, go to Tools > Board and select “SparkFun nRF52832 Breakout” under the “Nordic Semiconductor nRF5 Boards” section.
+* You can now create Sketches using the BLEPeripheral library as well and compile them for the RAK815 board.
+
 Build and use the bootloader
 -------------------
 To build the bootloader follow the steps below
@@ -50,7 +64,8 @@ Board Hardware details
 * SW1 is the board bootloader switch
 * LED6 is the bootloader time-bomb LED (currently not working, fix on the way)
 
-
+How to enter Serial-Bootloader mode
+-------------
 When you want to enter bootloader mode, keep SW1 pressed, then press SW3 and release SW3 after a second and then release SW1.
 
 
