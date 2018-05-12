@@ -19,7 +19,7 @@
  * @defgroup ble_sdk_app_bootloader_main main.c
  * @{
  * @ingroup dfu_bootloader_api
- * @brief Bootloader project main file.
+ * @brief Bootloader project main file.sfe_nrf52832_dfu.hex
  *
  * -# Receive start data packet. 
  * -# Based on start packet, prepare NVM area to store received data. 

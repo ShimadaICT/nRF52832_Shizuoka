@@ -16,7 +16,7 @@
 #define LEDS_NUMBER    4
 
 #define LED_START      7
-#define LED_1          7
+#define LED_1          25
 #define LED_2          8
 #define LED_3          11
 #define LED_4 	 	   12
@@ -42,7 +42,7 @@
 #define BUTTONS_NUMBER 1
 
 #define BUTTON_START   6
-#define BUTTON_1       6
+#define BUTTON_1       27
 #define BUTTON_STOP    6
 #define BUTTON_PULL    NRF_GPIO_PIN_PULLUP
 
@@ -54,10 +54,10 @@
 
 #define BUTTONS_MASK   0x00000040
 
-#define RX_PIN_NUMBER  26
-#define TX_PIN_NUMBER  27
-#define CTS_PIN_NUMBER 24
-#define RTS_PIN_NUMBER 25
+#define RX_PIN_NUMBER  28
+#define TX_PIN_NUMBER  29
+#define CTS_PIN_NUMBER 30
+#define RTS_PIN_NUMBER 31
 #define HWFC           false
 
 /*#define SPIS_MISO_PIN   28  // SPI MISO signal.

@@ -1,7 +1,7 @@
 PROJECT_NAME := dfu_dual_bank_serial_s132_pca10040
 
 # Replace SDK_PATH with the relative path to your Nordic nRF5 SDK (v11.0.0):
-SDK_PATH = ../../../../../../../../Nordic
+SDK_PATH = /home/nareshkrish/Downloads/nrf-sdk-v11.0.0
 # Folders below "Nordic" include "components", "examples", etc.
 
 # PROJ_DIR includes main.c, and the "config" folder:
