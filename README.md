@@ -1,44 +1,55 @@
-SparkFun nRF52832 Breakout
+RAK Wireless RAK815 nRF52832 Breakout Breakout
 ========================================
 
-[![SparkFun nRF52832 Breakout](https://cdn.sparkfun.com/r/500-500/assets/parts/1/1/7/5/2/13990-01.jpg)](https://www.sparkfun.com/products/13990)
+[[RAK Wireless RAK815 nRF52832 Breakout]](https://www.sparkfun.com/products/13990)
 
 [*SparkFun nRF52832 Breakout (WRL-13990)*](https://www.sparkfun.com/products/13990)
 
 The nRF52832 is [Nordic Semiconductor's](https://www.nordicsemi.com/eng/Products/Bluetooth-low-energy/nRF52832) latest multiprotocol radio system-on-chip (SoC). It's half microcontroller, with a list of features including 32 configurable I/O pins, SPI, I<sup>2</sup>C, UART, PWM, ADC's, 512kB flash, and 64kB RAM. And, it's half 2.4GHz multiprotocol radio, supporting **Bluetooth low energy** (BLE), **ANT**, and Nordic's proprietary 2.4GHz ultra low-power wireless communication -- it even features on-chip NFC tag support.
 
-SparkFun's [nRF52832 Breakout](https://www.sparkfun.com/products/13990) provides easy access to all of the chip's features. It breaks out all of the nRF52's I/O pins, provides a 32.768kHz RTC crystal, a user-programmable button and LED, and a trace antenna to send and receive those 2.4GHz transmissions. Plus, to make the chip as easy-to-flash as possible, the breakout comes pre-programmed with a **serial bootloader**.
+RAK815(RAK813 BreakBoard) is a wireless remote solution based on the RAK813 +
+GPS + MEMS + HT+LCD design. It integrates the latest LoRaWAN 1.0.2 protocol and the
+latest Bluetooth 5.0 protocol, supports LoRaWAN working mode, supports Bluetooth
+transparent transmission, Bluetooth up to 300 meters away..
+
+RAK815(RAK813 BreakBoard) built-in GPS, acceleration, temperature and humidity
+sensors, expanded I2C LCD interface. We provide case applications that can configure
+LoRaWAN parameters using Bluetooth, display sensor data using LCD, and upload
+sensor data to the LoRaWAN network. And all the code open source. Users can find all
+the open source code in github. We also designed three customizable buttons and two
+customizable LED lights for our users, allowing users to implement they idea with
+open-source code.
+
+RAK815(RAK813 BreakBoard) is also a support for battery-powered products.
+Greatly expanded product application scenarios. We also designed the function to enter
+the low power mode when the device is detected to be stationary to ensure battery life.
+The device also supports RAK831 + Ri3 gateway to use, you can graphically display the
+various data of the sensor in the Cayenne platform, but also support the real-time
+observation of sensor data on the phone.the breakout comes pre-programmed with a **serial bootloader**.
 
 Repository Contents
 -------------------
-
-* **/Documentation** - Data sheets, additional product information
 * **/Firmware** - Serial bootloader source and hex files
-* **/Hardware** - Eagle design files (.brd, .sch)
-* **/Production** - Production panel files (.brd)
 
 Documentation
 --------------
 * **[Arduino Hardware Definitions](https://github.com/sparkfun/Arduino_Boards/)** - Arduino cores and tools for the nRF52.
-* **[Hookup Guide](https://learn.sparkfun.com/tutorials/nrf52832-breakout-board-hookup-guide)** - Basic hookup guide for the nRF52832 Breakout.
-* **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.
 
 Product Versions
 ----------------
-* [SparkFun nRF52832 Breakout (WRL-13990)](https://www.sparkfun.com/products/13990)- Initial release of the nRF52832 Breakout
+* [RAK Wireless RAK815 nRF52832 (RAK815)](https://www.sparkfun.com/products/13990)- Initial release of the RAK Wireless RAK815 nRF52832 Breakout
 
 Version History
 ---------------
+* v1.0 Support for the RAK815 board. LED indicator for bootloader is not working. fix on the way !!
 
 License Information
 -------------------
+This product is completely _**open source**_! Please fork and provide your valuable feedback.
 
-This product is _**open source**_! 
+Special Thanks !!!!!
+-------------------
+THANKS a bunch to the awesome guys at Sparkfun for their original serial bootloader that i have reused for this board.
 
-Please review the LICENSE.md file for license information. 
-
-If you have any questions or concerns on licensing, please contact techsupport@sparkfun.com.
-
-Distributed as-is; no warranty is given.
-
-- Your friends at SparkFun.
+Their git repo is here:
+https://github.com/sparkfun/nRF52832_Breakout
