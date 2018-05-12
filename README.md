@@ -48,6 +48,20 @@ https://raw.githubusercontent.com/sparkfun/Arduino_Boards/nrf5/IDE_Board_Manager
 * The install may take a few minutes – the package includes arm-gcc and a few other tools totaling around 100 MB. Once the installation is complete, go to Tools > Board and select “SparkFun nRF52832 Breakout” under the “Nordic Semiconductor nRF5 Boards” section.
 * You can now create Sketches using the BLEPeripheral library as well and compile them for the RAK815 board.
 
+Install the RAKWireless RAK815 Board variant
+--------------------
+It is easy to install the RAkWireless Board variant into the IDE (For ubuntu/other linux users)
+
+* Copy the Boards.txt into .arduino15/packages/SparkFun/hardware/nRF5/0.2.3/boards.txt
+* Copy the RAK815_nrf52832_Breakout folder in the variants folder in the path .arduino15/packages/SparkFun/hardware/nRF5/0.2.3
+
+For Windows users, just search for the path that has the packages/Sparkfun folder :)
+
+* Next, restart Arduino IDE, you should be able to see an entry for the RAK Wireless RAK815 board. Now you can flash as you normally do
+
+
+
+
 Build and use the bootloader
 -------------------
 To build the bootloader follow the steps below
