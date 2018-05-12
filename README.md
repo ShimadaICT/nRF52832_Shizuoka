@@ -1,9 +1,7 @@
 RAK Wireless RAK815 nRF52832 Breakout Breakout
 ========================================
 
-[[RAK Wireless RAK815 nRF52832 Breakout]](https://www.sparkfun.com/products/13990)
-
-[*SparkFun nRF52832 Breakout (WRL-13990)*](https://www.sparkfun.com/products/13990)
+[[RAK Wireless RAK815 nRF52832 Breakout]](https://www.aliexpress.com/item/RAK815-Hybrid-Location-Tracker-LoRa-Bluetooth-5-0-Beacon-GPS-Sensors-LCD-LoRaWAN-1-0-2/32849717052.html)
 
 The nRF52832 is [Nordic Semiconductor's](https://www.nordicsemi.com/eng/Products/Bluetooth-low-energy/nRF52832) latest multiprotocol radio system-on-chip (SoC). It's half microcontroller, with a list of features including 32 configurable I/O pins, SPI, I<sup>2</sup>C, UART, PWM, ADC's, 512kB flash, and 64kB RAM. And, it's half 2.4GHz multiprotocol radio, supporting **Bluetooth low energy** (BLE), **ANT**, and Nordic's proprietary 2.4GHz ultra low-power wireless communication -- it even features on-chip NFC tag support.
 
@@ -25,7 +23,8 @@ Greatly expanded product application scenarios. We also designed the function to
 the low power mode when the device is detected to be stationary to ensure battery life.
 The device also supports RAK831 + Ri3 gateway to use, you can graphically display the
 various data of the sensor in the Cayenne platform, but also support the real-time
-observation of sensor data on the phone.the breakout comes pre-programmed with a **serial bootloader**.
+observation of sensor data on the phone.
+
 
 Repository Contents
 -------------------
@@ -35,9 +34,29 @@ Documentation
 --------------
 * **[Arduino Hardware Definitions](https://github.com/sparkfun/Arduino_Boards/)** - Arduino cores and tools for the nRF52.
 
+Build and use the bootloader
+-------------------
+To build the bootloader follow the steps below
+
+* Clone the Repository
+* cd to nRF52832_Breakout folder and do make clean
+* Then, execute the command "make sfe_nrf52832_dfu"
+* Once the program successfully builds, just connect your RAK815 over SWD interface using your JLink module
+* execute the command "./flash_bootloader.sh"
+
+Board Hardware details
+-------------------
+* SW3 is the board reset switch
+* SW1 is the board bootloader switch
+* LED6 is the bootloader time-bomb LED (currently not working, fix on the way)
+
+
+When you want to enter bootloader mode, keep SW1 pressed, then press SW3 and release SW3 after a second and then release SW1.
+
+
 Product Versions
 ----------------
-* [RAK Wireless RAK815 nRF52832 (RAK815)](https://www.sparkfun.com/products/13990)- Initial release of the RAK Wireless RAK815 nRF52832 Breakout
+* [RAK Wireless RAK815 nRF52832 (RAK815)](https://www.aliexpress.com/item/RAK815-Hybrid-Location-Tracker-LoRa-Bluetooth-5-0-Beacon-GPS-Sensors-LCD-LoRaWAN-1-0-2/32849717052.html)- Initial release of the RAK Wireless RAK815 nRF52832 Breakout
 
 Version History
 ---------------
