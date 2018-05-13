@@ -11,6 +11,7 @@ Contents
 * **/LIS3DH Demo** : Demo program for the onboard LIS3DH Sensors
 * **/LIS3DH Spark Demos** : Demo programs using the Sparkfun LIS3DH library with interrupt support
 * **/simple_test_GPS**: Demo program for the Ublox MAX-7q GPS reciever.
+* **/BLEserial**: Demo program showcasing the BLE UART example to send messages to the nrf UART profile. Use the Adafruit Bluefruit app to open the UART and see the messages.
 
 External lib dependencies
 -----
