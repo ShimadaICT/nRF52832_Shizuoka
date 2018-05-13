@@ -10,6 +10,7 @@ Contents
 * **/SHT31Demo** : Demo program for the onboard SHT31 sensor
 * **/LIS3DH Demo** : Demo program for the onboard LIS3DH Sensors
 * **/LIS3DH Spark Demos** : Demo programs using the Sparkfun LIS3DH library with interrupt support
+* **/simple_test_GPS**: Demo program for the Ublox MAX-7q GPS reciever.
 
 External lib dependencies
 -----
@@ -21,3 +22,11 @@ The examples mentioned require the followin libraries
 * Adafruit SHT31 sensor: https://github.com/adafruit/Adafruit_SHT31
 * Acrobotic OLED lib: https://github.com/acrobotic/Ai_Ardulib_SSD1306
 * Sparkfun LIS3DH lib: https://github.com/sparkfun/SparkFun_LIS3DH_Arduino_Library
+* TinyGPS lib: https://github.com/mikalhart/TinyGPS
+
+Things to note for GPS example:
+-------
+
+The GPS example uses the software serial. Make sure you enable software serial by following the instruction in the README file inside **Arduino Files** folder
+
+Once enabled, ensure that the p0.19 and p0.20 pins on the nrf52 are connected to RX and TX of the GPS module and initiate SoftwareSerial object.
