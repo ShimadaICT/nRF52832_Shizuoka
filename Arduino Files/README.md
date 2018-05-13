@@ -26,9 +26,9 @@ Software Serial support
 Based on the details in the PR request here:
 https://github.com/sandeepmistry/arduino-nRF5/pull/205/files?utf8=%E2%9C%93&diff=split
 
-I have made the necessary changes in the WInterrupt.c and header files to support the SOftware serial. I have tested uptil 38400 as baud rate and things work well. 
+I have made the necessary changes in the WInterrupt.c and header files to support the Software serial. I have tested uptil 38400 as baud rate and things work well.
 
-Please replace the three files in your sparkfun/adafruit nrf5 core directory and enjoy software Serial
+Please replace the three files in your sparkfun/adafruit nrf5 core directory and enjoy SoftwareSerial. 
 
 Thanks to the awesome devs at the nrf5-arduino core.  
 https://github.com/micooke
