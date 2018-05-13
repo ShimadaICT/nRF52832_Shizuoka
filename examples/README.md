@@ -28,6 +28,6 @@ The examples mentioned require the followin libraries
 Things to note for GPS example:
 -------
 
-The GPS example uses the software serial. Make sure you enable software serial by following the instruction in the README file inside **Arduino Files** folder
+The GPS example uses the SoftwareSerial. Make sure you enable software serial by following the instruction in the README file inside **Arduino Files** folder
 
 Once enabled, ensure that the p0.19 and p0.20 pins on the nrf52 are connected to RX and TX of the GPS module and initiate SoftwareSerial object.
