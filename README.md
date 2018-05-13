@@ -83,7 +83,7 @@ Board Hardware details
 
 How to enter Serial-Bootloader mode
 -------------
-When you want to enter bootloader mode, keep SW1 pressed, then press SW3 and release SW3 after a second and then release SW1.
+When you want to enter bootloader mode, keep **SW1** pressed, then press **SW3** and release **SW3** after a second and then release **SW1**.
 
 
 Product Versions
