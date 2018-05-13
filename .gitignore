@@ -4,6 +4,7 @@
 *.s#?
 *.b#?
 *.l#?
+_build
 
 # Eagle project file
 # It contains a serial number and references to the file structure
@@ -41,4 +42,3 @@ eagle.epf
 
 # file locks introduced since 7.x
 *.lck
-
