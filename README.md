@@ -29,6 +29,9 @@ observation of sensor data on the phone.
 Repository Contents
 -------------------
 * **/Firmware** - Serial bootloader source and hex files
+* **/Arduino Files** - Arduino IDE Support Files
+* **/examples** - Arduino examples for onboard peripherals
+
 
 Documentation
 --------------
