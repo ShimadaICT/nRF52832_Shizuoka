@@ -17,9 +17,9 @@
  * @ingroup dfu_bootloader_api
  * @brief Bootloader project main file.
  *
- * -# Receive start data packet. 
- * -# Based on start packet, prepare NVM area to store received data. 
- * -# Receive data packet. 
+ * -# Receive start data packet.
+ * -# Based on start packet, prepare NVM area to store received data.
+ * -# Receive data packet.
  * -# Validate data packet.
  * -# Write Data packet to NVM.
  * -# If not finished - Wait for next packet.
@@ -75,7 +75,7 @@
  *
  * @details This function will be called in case of an assert in the SoftDevice.
  *
- * @warning This handler is an example only and does not fit a final product. You need to analyze 
+ * @warning This handler is an example only and does not fit a final product. You need to analyze
  *          how your product is supposed to react in case of Assert.
  * @warning On assert from the SoftDevice, the system can only recover on reset.
  *
@@ -111,7 +111,7 @@ static void timers_init(void)
 static void buttons_init(void)
 {
     nrf_gpio_cfg_sense_input(BOOTLOADER_BUTTON,
-                             BUTTON_PULL, 
+                             BUTTON_PULL,
                              NRF_GPIO_PIN_SENSE_LOW);
 
 }
@@ -134,8 +134,8 @@ static void sys_evt_dispatch(uint32_t event)
  *
  * @details Initializes the SoftDevice and the BLE event interrupt.
  *
- * @param[in] init_softdevice  true if SoftDevice should be initialized. The SoftDevice must only 
- *                             be initialized if a chip reset has occured. Soft reset from 
+ * @param[in] init_softdevice  true if SoftDevice should be initialized. The SoftDevice must only
+ *                             be initialized if a chip reset has occured. Soft reset from
  *                             application must not reinitialize the SoftDevice.
  */
 static void ble_stack_init(bool init_softdevice)
@@ -149,10 +149,10 @@ static void ble_stack_init(bool init_softdevice)
         err_code = sd_mbr_command(&com);
         APP_ERROR_CHECK(err_code);
     }
-    
+
     err_code = sd_softdevice_vector_table_base_set(BOOTLOADER_REGION_START);
     APP_ERROR_CHECK(err_code);
-   
+
     SOFTDEVICE_HANDLER_APPSH_INIT(&clock_lf_cfg, true);
 
     // Enable BLE stack.
@@ -164,7 +164,7 @@ static void ble_stack_init(bool init_softdevice)
     ble_enable_params.gatts_enable_params.service_changed = IS_SRVC_CHANGED_CHARACT_PRESENT;
     err_code = softdevice_enable(&ble_enable_params);
     APP_ERROR_CHECK(err_code);
-    
+
     err_code = softdevice_sys_evt_handler_set(sys_evt_dispatch);
     APP_ERROR_CHECK(err_code);
 }
@@ -190,7 +190,7 @@ int main(void)
     {
         NRF_POWER->GPREGRET = 0;
     }
-    
+
     leds_init();
 
     // This check ensures that the defined fields in the bootloader corresponds with actual
@@ -227,12 +227,14 @@ int main(void)
     }
 
     dfu_start  = app_reset;
+    /*
+    Edit the line below if you want to make the DFU mode be triggered by a button pressed*/
     dfu_start |= true; //((nrf_gpio_pin_read(BOOTLOADER_BUTTON) == 0) ? true: false);
-	
-		
-		
-		
-    
+
+
+
+
+
     if (dfu_start || (!bootloader_app_is_valid(DFU_BANK_0_REGION_START)))
     {
         nrf_gpio_pin_clear(UPDATE_IN_PROGRESS_LED);
@@ -250,6 +252,6 @@ int main(void)
         // @note: Only applications running from DFU_BANK_0_REGION_START is supported.
         bootloader_app_start(DFU_BANK_0_REGION_START);
     }
-    
+
     NVIC_SystemReset();
 }
