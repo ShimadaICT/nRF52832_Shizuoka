@@ -23,6 +23,9 @@ Documentation for the nRF5 SDK (v11.0.0) can be found at [http://infocenter.nord
 
 ### Building the Bootloader
 
-Before building the bootloader, open the [Makefile](https://github.com/sparkfun/nRF52832_Breakout/blob/master/Firmware/bootloader-custom/Makefile) and modify `SDK_PATH` ([line 4](https://github.com/sparkfun/nRF52832_Breakout/blob/master/Firmware/bootloader-custom/Makefile#L4), setting the relative path to the **top-level path** of your Nordic SDK.
+Replace the two file below from this repository into the \examples\dfu\bootloader folder in Nordic SDK
 
-Once that is set, open this "bootloader-custom" folder in a command terminal and type `make`. `sfe_nrf52832_dfu.hex` should be created in a "_build" folder, which can be uploaded to the **Bootloader section** of the nRF52832's flash.
+* **main.c**, to replace in \examples\dfu\bootloader folder
+* **dfu_bank_internal.h**, to replace in \components\libraries\bootloader_dfu folder
+
+compile the bootloader app by invoking make in the bootloader example directory. Sample bootloder is present in the **hex/** folder and i have also added a merged hex. 
